@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://browseCaption"
+        class="com.company.cetrd.web.reference.taxrate.TaxRateBrowse"
+        focusComponent="taxRatesTable"
+        lookupComponent="taxRatesTable"
+        messagesPack="com.company.cetrd.web.reference.taxrate">
+    <dsContext>
+        <collectionDatasource id="taxRatesDs"
+                              class="com.company.cetrd.entity.reference.TaxRate"
+                              view="_local">
+            <query>
+                <![CDATA[select e from cetrd$TaxRate e]]>
+            </query>
+        </collectionDatasource>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="taxRatesTable"
+            spacing="true">
+        <filter id="filter"
+                applyTo="taxRatesTable"
+                datasource="taxRatesDs">
+            <properties include=".*"/>
+        </filter>
+        <table id="taxRatesTable"
+               width="100%">
+            <actions>
+                <action id="create"/>
+                <action id="edit"/>
+                <action id="remove"/>
+            </actions>
+            <columns>
+                <column id="validFrom"/>
+                <column id="validUntil"/>
+                <column id="rate"/>
+            </columns>
+            <rows datasource="taxRatesDs"/>
+            <rowsCount/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn"
+                        action="taxRatesTable.create"/>
+                <button id="editBtn"
+                        action="taxRatesTable.edit"/>
+                <button id="removeBtn"
+                        action="taxRatesTable.remove"/>
+            </buttonsPanel>
+        </table>
+    </layout>
+</window>

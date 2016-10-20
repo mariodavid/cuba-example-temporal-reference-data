@@ -1,0 +1,17 @@
+- Order
+	- OrderDate
+	- paymentMethod (Katalog)
+	- netPrice
+	- taxRate (Katalog mit Gültigkeit mit Filterung auf OrderDate)
+
+- Customer
+	- customerType (Katalog ohne Gültigkeit)
+
+- Tenant
+
+Szenatio:
+ - Aktiv durch Löschen ersetzen: ein PaymentType wird gelöscht und ein Order verweist noch darauf (verhalten mit LookupField und Browse Screen)
+ - Filterung mit Gültigkeit: Zeite nur TagRates an, die zu dem Zeitpunkt des OrderDates da waren
+ - Filterung auf Mandanten Ebene: Für bestimmte Mandanten sollen nur bestimmte TaxRates angezeigt werden
+
+

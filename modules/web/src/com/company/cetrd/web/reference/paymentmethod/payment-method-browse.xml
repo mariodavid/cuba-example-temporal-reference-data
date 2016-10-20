@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://browseCaption"
+        class="com.company.cetrd.web.reference.paymentmethod.PaymentMethodBrowse"
+        focusComponent="paymentMethodsTable"
+        lookupComponent="paymentMethodsTable"
+        messagesPack="com.company.cetrd.web.reference.paymentmethod">
+    <dsContext>
+        <collectionDatasource id="paymentMethodsDs"
+                              class="com.company.cetrd.entity.reference.PaymentMethod"
+                              view="_local">
+            <query>
+                <![CDATA[select e from cetrd$PaymentMethod e]]>
+            </query>
+        </collectionDatasource>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="paymentMethodsTable"
+            spacing="true">
+        <filter id="filter"
+                applyTo="paymentMethodsTable"
+                datasource="paymentMethodsDs">
+            <properties include=".*"/>
+        </filter>
+        <table id="paymentMethodsTable"
+               width="100%">
+            <actions>
+                <action id="create"/>
+                <action id="edit"/>
+                <action id="remove"/>
+            </actions>
+            <columns>
+                <column id="name"/>
+            </columns>
+            <rows datasource="paymentMethodsDs"/>
+            <rowsCount/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn"
+                        action="paymentMethodsTable.create"/>
+                <button id="editBtn"
+                        action="paymentMethodsTable.edit"/>
+                <button id="removeBtn"
+                        action="paymentMethodsTable.remove"/>
+            </buttonsPanel>
+        </table>
+    </layout>
+</window>

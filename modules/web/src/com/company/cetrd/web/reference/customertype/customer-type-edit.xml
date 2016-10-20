@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://editCaption"
+        class="com.company.cetrd.web.reference.customertype.CustomerTypeEdit"
+        datasource="customerTypeDs"
+        focusComponent="fieldGroup"
+        messagesPack="com.company.cetrd.web.reference.customertype">
+    <dsContext>
+        <datasource id="customerTypeDs"
+                    class="com.company.cetrd.entity.reference.CustomerType"
+                    view="_local"/>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="windowActions"
+            spacing="true">
+        <fieldGroup id="fieldGroup"
+                    datasource="customerTypeDs">
+            <column width="250px">
+                <field id="name"/>
+            </column>
+        </fieldGroup>
+        <frame id="windowActions"
+               screen="editWindowActions"/>
+    </layout>
+</window>
