@@ -31,7 +31,6 @@
                 <action id="remove"/>
             </actions>
             <columns>
-                <column id="tenant"/>
                 <column id="name"/>
             </columns>
             <rows datasource="customersDs"/>

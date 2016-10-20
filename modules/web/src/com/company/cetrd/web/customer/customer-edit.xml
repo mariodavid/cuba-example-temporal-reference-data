@@ -20,7 +20,6 @@
         <fieldGroup id="fieldGroup"
                     datasource="customerDs">
             <column width="250px">
-                <field id="tenant"/>
                 <field id="name"/>
             </column>
         </fieldGroup>
