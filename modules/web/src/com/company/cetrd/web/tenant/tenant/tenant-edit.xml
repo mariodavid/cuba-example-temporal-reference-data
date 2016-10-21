@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://editCaption"
+        class="com.company.cetrd.web.tenant.tenant.TenantEdit"
+        datasource="tenantDs"
+        focusComponent="fieldGroup"
+        messagesPack="com.company.cetrd.web.tenant.tenant">
+    <dsContext>
+        <datasource id="tenantDs"
+                    class="com.company.cetrd.entity.tenant.Tenant"
+                    view="_local"/>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="windowActions"
+            spacing="true">
+        <fieldGroup id="fieldGroup"
+                    datasource="tenantDs">
+            <column width="250px">
+                <field id="name"/>
+                <field id="tenantid"/>
+            </column>
+        </fieldGroup>
+        <frame id="windowActions"
+               screen="editWindowActions"/>
+    </layout>
+</window>

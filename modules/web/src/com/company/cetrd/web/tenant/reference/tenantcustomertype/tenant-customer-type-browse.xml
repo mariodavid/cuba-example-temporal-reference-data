@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://browseCaption"
+        class="com.company.cetrd.web.tenant.reference.tenantcustomertype.TenantCustomerTypeBrowse"
+        focusComponent="tenantCustomerTypesTable"
+        lookupComponent="tenantCustomerTypesTable"
+        messagesPack="com.company.cetrd.web.tenant.reference.tenantcustomertype">
+    <dsContext>
+        <collectionDatasource id="tenantCustomerTypesDs"
+                              class="com.company.cetrd.entity.reference.tenant.TenantCustomerType"
+                              view="tenantCustomerType-view">
+            <query>
+                <![CDATA[select e from cetrd$TenantCustomerType e]]>
+            </query>
+        </collectionDatasource>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="tenantCustomerTypesTable"
+            spacing="true">
+        <filter id="filter"
+                applyTo="tenantCustomerTypesTable"
+                datasource="tenantCustomerTypesDs">
+            <properties include=".*"/>
+        </filter>
+        <table id="tenantCustomerTypesTable"
+               width="100%">
+            <actions>
+                <action id="create"/>
+                <action id="edit"/>
+                <action id="remove"/>
+            </actions>
+            <columns>
+                <column id="customerType"/>
+                <column id="tenant"/>
+            </columns>
+            <rows datasource="tenantCustomerTypesDs"/>
+            <rowsCount/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn"
+                        action="tenantCustomerTypesTable.create"/>
+                <button id="editBtn"
+                        action="tenantCustomerTypesTable.edit"/>
+                <button id="removeBtn"
+                        action="tenantCustomerTypesTable.remove"/>
+            </buttonsPanel>
+        </table>
+    </layout>
+</window>

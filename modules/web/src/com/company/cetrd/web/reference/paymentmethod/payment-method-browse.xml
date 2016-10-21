@@ -31,7 +31,10 @@
                 <action id="remove"/>
             </actions>
             <columns>
-                <column id="name"/>
+                <column id="code" />
+                <column id="name" />
+                <column id="validFrom" />
+                <column id="validUntil" />
             </columns>
             <rows datasource="paymentMethodsDs"/>
             <rowsCount/>

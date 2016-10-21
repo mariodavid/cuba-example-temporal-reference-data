@@ -16,12 +16,12 @@
             spacing="true">
         <fieldGroup id="fieldGroup"
                     datasource="orderDs">
-            <column width="250px">
-                <field id="customer"/>
+            <column width="400px">
+                <field id="customer" />
+                <field id="paymentMethod" stylename="temporal-reference-entity-lookup"/>
                 <field id="orderDate"/>
-                <field id="paymentMethod"/>
                 <field id="netPrice"/>
-                <field id="taxRate"/>
+                <field id="taxRate" stylename="temporal-reference-entity-lookup"/>
             </column>
         </fieldGroup>
         <frame id="windowActions"

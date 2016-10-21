@@ -31,8 +31,10 @@
                 <action id="remove"/>
             </actions>
             <columns>
-                <column id="validFrom"/>
-                <column id="validUntil"/>
+                <column id="code" />
+                <column id="name" />
+                <column id="validFrom" />
+                <column id="validUntil" />
                 <column id="rate"/>
             </columns>
             <rows datasource="taxRatesDs"/>

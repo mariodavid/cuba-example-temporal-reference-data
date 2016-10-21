@@ -21,4 +21,12 @@
             template="com/company/cetrd/web/customer/customer-browse.xml"/>
     <screen id="cetrd$Customer.edit"
             template="com/company/cetrd/web/customer/customer-edit.xml"/>
+    <screen id="cetrd$TenantCustomerType.browse"
+            template="com/company/cetrd/web/tenant/reference/tenantcustomertype/tenant-customer-type-browse.xml"/>
+    <screen id="cetrd$TenantCustomerType.edit"
+            template="com/company/cetrd/web/tenant/reference/tenantcustomertype/tenant-customer-type-edit.xml"/>
+    <screen id="cetrd$Tenant.edit"
+            template="com/company/cetrd/web/tenant/tenant/tenant-edit.xml"/>
+    <screen id="cetrd$Tenant.browse"
+            template="com/company/cetrd/web/tenant/tenant/tenant-browse.xml"/>
 </screen-config>

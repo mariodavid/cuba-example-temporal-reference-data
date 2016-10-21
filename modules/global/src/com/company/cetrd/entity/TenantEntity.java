@@ -27,11 +27,11 @@ public class TenantEntity extends StandardEntity {
     @PostConstruct
     protected void init() {
         Integer tenant = readTenantIdFromSession();
-        if (tenant != null) {
+        if (this.tenant == null && tenant != null) {
             setTenant(tenant);
         }
         else {
-            throw new RuntimeException("Could not set tenant");
+            setTenant(1);
         }
 
     }

@@ -32,6 +32,8 @@
             </actions>
             <columns>
                 <column id="name"/>
+                <column id="customerType"/>
+                <column id="preferredPaymentMethod"/>
             </columns>
             <rows datasource="customersDs"/>
             <rowsCount/>

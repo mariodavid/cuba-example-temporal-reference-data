@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <menu-config xmlns="http://schemas.haulmont.com/cuba/menu.xsd">
     <menu id="application"
+          icon="font-icon:MONEY"
           insertBefore="administration">
         <item id="cetrd$Order.browse"/>
         <item id="cetrd$Customer.browse"/>
@@ -8,8 +9,21 @@
     <menu id="reference"
           icon="font-icon:BOOK"
           insertBefore="administration">
-        <item id="cetrd$CustomerType.browse"/>
-        <item id="cetrd$PaymentMethod.browse"/>
-        <item id="cetrd$TaxRate.browse"/>
+        <item id="cetrd$CustomerType.browse"
+              stylename="reference-entity"/>
+        <item id="cetrd$PaymentMethod.browse"
+              icon="font-icon:CALENDAR"
+              stylename="temporal-reference-entity"/>
+        <item id="cetrd$TaxRate.browse"
+              icon="font-icon:CALENDAR"
+              stylename="temporal-reference-entity"/>
+    </menu>
+    <menu id="tenant"
+          icon="font-icon:ELLIPSIS_V"
+          insertBefore="administration">
+        <menu id="tenantReference">
+            <item id="cetrd$TenantCustomerType.browse"/>
+        </menu>
+        <item id="cetrd$Tenant.browse"/>
     </menu>
 </menu-config>

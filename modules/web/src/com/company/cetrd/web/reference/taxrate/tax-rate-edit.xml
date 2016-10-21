@@ -17,9 +17,11 @@
         <fieldGroup id="fieldGroup"
                     datasource="taxRateDs">
             <column width="250px">
-                <field id="validFrom"/>
-                <field id="validUntil"/>
+                <field id="name"/>
+                <field id="code"/>
                 <field id="rate"/>
+                <field id="validFrom" />
+                <field id="validUntil" />
             </column>
         </fieldGroup>
         <frame id="windowActions"

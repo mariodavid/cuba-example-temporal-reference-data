@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://browseCaption"
+        class="com.company.cetrd.web.tenant.tenant.TenantBrowse"
+        focusComponent="tenantsTable"
+        lookupComponent="tenantsTable"
+        messagesPack="com.company.cetrd.web.tenant.tenant">
+    <dsContext>
+        <collectionDatasource id="tenantsDs"
+                              class="com.company.cetrd.entity.tenant.Tenant"
+                              view="_local">
+            <query>
+                <![CDATA[select e from cetrd$Tenant e]]>
+            </query>
+        </collectionDatasource>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="tenantsTable"
+            spacing="true">
+        <filter id="filter"
+                applyTo="tenantsTable"
+                datasource="tenantsDs">
+            <properties include=".*"/>
+        </filter>
+        <table id="tenantsTable"
+               width="100%">
+            <actions>
+                <action id="create"/>
+                <action id="edit"/>
+                <action id="remove"/>
+            </actions>
+            <columns>
+                <column id="name"/>
+                <column id="tenantid"/>
+            </columns>
+            <rows datasource="tenantsDs"/>
+            <rowsCount/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn"
+                        action="tenantsTable.create"/>
+                <button id="editBtn"
+                        action="tenantsTable.edit"/>
+                <button id="removeBtn"
+                        action="tenantsTable.remove"/>
+            </buttonsPanel>
+        </table>
+    </layout>
+</window>

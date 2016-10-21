@@ -5,6 +5,10 @@
           name="customer-view">
         <property name="orders"
                   view="_minimal"/>
+        <property name="customerType"
+                  view="_minimal"/>
+        <property name="preferredPaymentMethod"
+                  view="_minimal"/>
     </view>
     <view class="com.company.cetrd.entity.Order"
           extends="_local"
@@ -14,6 +18,14 @@
         <property name="paymentMethod"
                   view="_minimal"/>
         <property name="taxRate"
+                  view="_minimal"/>
+    </view>
+    <view class="com.company.cetrd.entity.reference.tenant.TenantCustomerType"
+          extends="_local"
+          name="tenantCustomerType-view">
+        <property name="customerType"
+                  view="_minimal"/>
+        <property name="tenant"
                   view="_minimal"/>
     </view>
 </views>

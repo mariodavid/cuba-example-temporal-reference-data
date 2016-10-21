@@ -21,6 +21,10 @@
                     datasource="customerDs">
             <column width="250px">
                 <field id="name"/>
+                <field id="customerType"
+                       stylename="reference-entity-lookup"/>
+                <field id="preferredPaymentMethod"
+                       stylename="temporal-reference-entity-lookup"/>
             </column>
         </fieldGroup>
         <groupBox id="ordersBox"

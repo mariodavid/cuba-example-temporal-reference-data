@@ -9,5 +9,9 @@
         <class>com.company.cetrd.entity.Order</class>
         <class>com.company.cetrd.entity.reference.PaymentMethod</class>
         <class>com.company.cetrd.entity.reference.TaxRate</class>
+        <class>com.company.cetrd.entity.reference.TemporalReferenceEntity</class>
+        <class>com.company.cetrd.entity.reference.ReferenceEntity</class>
+        <class>com.company.cetrd.entity.reference.tenant.TenantCustomerType</class>
+        <class>com.company.cetrd.entity.tenant.Tenant</class>
     </persistence-unit>
 </persistence>
