@@ -9,14 +9,10 @@ create table CETRD_CUSTOMER (
     DELETE_TS timestamp,
     DELETED_BY varchar(50),
     TENANT integer not null,
-    DTYPE varchar(100),
     --
     NAME varchar(255) not null,
     CUSTOMER_TYPE_ID varchar(36),
     PREFERRED_PAYMENT_METHOD_ID varchar(36),
-    --
-    -- from cetrd$OldCustomer
-    AGE integer,
     --
     primary key (ID)
 )^
